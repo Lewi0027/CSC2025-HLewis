@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f41587db-b196-453f-8daf-e42ec2831c4f": {
+      "ProjectGuid": "f41587db-b196-453f-8daf-e42ec2831c4f",
+      "DisplayName": "MASM",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
