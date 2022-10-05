@@ -15,7 +15,12 @@
       "ProjectGuid": "49dee90e-7d5b-4cab-a998-1ec42649cc42",
       "DisplayName": "Hello World",
       "ColorIndex": 1
+    },
+    "bcfd7b1a-ac77-45e5-82f5-9f4192f4b332": {
+      "ProjectGuid": "bcfd7b1a-ac77-45e5-82f5-9f4192f4b332",
+      "DisplayName": "SumOfNumbers",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }
