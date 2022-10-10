@@ -1,7 +1,0 @@
-﻿  Assembling main.asm...
-main.asm(1): error A2008: syntax error : .
-main.asm(2): error A2008: syntax error : .
-main.asm(4): error A2034: must be in segment block
-main.asm(9): error A2008: syntax error : near
-main.asm(15): fatal error A1010: unmatched block nesting : main
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: The command "ml64.exe /c /nologo /Zi /Fo"x64\Debug\main.obj" /W3 /errorReport:prompt  /Tamain.asm" exited with code 1.
