@@ -12,7 +12,7 @@ _main:
 	; add all values from 0-10
 	mov		eax, 1
 	mov		ebx, 2
-	add		eax, ebx
+	add		ebx, eax
 	
 	push 0
 	call _ExitProcess@4

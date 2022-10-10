@@ -10,7 +10,7 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CSC2025" expanded="True">
-            <Node name="Hello World" expanded="True" selected="True" />
+            <Node name="SumOfNumbers" selected="True" />
           </Node>
         </State>
       </Pad>
