@@ -7,17 +7,15 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MASM", "MASM\MASM.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello World", "Hello World\Hello World.vcxproj", "{49DEE90E-7D5B-4CAB-A998-1EC42649CC42}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SumOfNumbers", "SumOfNumbers\SumOfNumbers.vcxproj", "{BCFD7B1A-AC77-45E5-82F5-9F4192F4B332}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SumOfNumbers-HJL", "SumOfNumbers-HJL\SumOfNumbers-HJL.vcxproj", "{7D4B168E-0722-4D44-8550-D63467B50981}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SumOfNumbers", "SumOfNumbers-HJL\SumOfNumbers-HJL.vcxproj", "{7D4B168E-0722-4D44-8550-D63467B50981}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Exchange", "Exchange\Exchange.vcxproj", "{E5569A0A-B4FC-4291-9627-B454AD0DF0EA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Alphabet", "Alphabet\Alphabet.vcxproj", "{8BED9304-59D4-49E0-8E28-7746E3F960A1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fibonacci", "Fibonacci\Fibonacci.vcxproj", "{0B3C277C-0A54-4C21-A030-F8F6511BC0FD}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fibonacci-Wrong", "Fibonacci\Fibonacci.vcxproj", "{0B3C277C-0A54-4C21-A030-F8F6511BC0FD}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fibonacci-Hard", "Fibonacci-Hard\Fibonacci-Hard.vcxproj", "{772DA0A5-45B5-4C79-8832-91D918E4ACC9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fibonacci", "Fibonacci-Hard\Fibonacci-Hard.vcxproj", "{772DA0A5-45B5-4C79-8832-91D918E4ACC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,14 +41,6 @@ Global
 		{49DEE90E-7D5B-4CAB-A998-1EC42649CC42}.Release|x64.Build.0 = Release|x64
 		{49DEE90E-7D5B-4CAB-A998-1EC42649CC42}.Release|x86.ActiveCfg = Release|Win32
 		{49DEE90E-7D5B-4CAB-A998-1EC42649CC42}.Release|x86.Build.0 = Release|Win32
-		{BCFD7B1A-AC77-45E5-82F5-9F4192F4B332}.Debug|x64.ActiveCfg = Debug|x64
-		{BCFD7B1A-AC77-45E5-82F5-9F4192F4B332}.Debug|x64.Build.0 = Debug|x64
-		{BCFD7B1A-AC77-45E5-82F5-9F4192F4B332}.Debug|x86.ActiveCfg = Debug|Win32
-		{BCFD7B1A-AC77-45E5-82F5-9F4192F4B332}.Debug|x86.Build.0 = Debug|Win32
-		{BCFD7B1A-AC77-45E5-82F5-9F4192F4B332}.Release|x64.ActiveCfg = Release|x64
-		{BCFD7B1A-AC77-45E5-82F5-9F4192F4B332}.Release|x64.Build.0 = Release|x64
-		{BCFD7B1A-AC77-45E5-82F5-9F4192F4B332}.Release|x86.ActiveCfg = Release|Win32
-		{BCFD7B1A-AC77-45E5-82F5-9F4192F4B332}.Release|x86.Build.0 = Release|Win32
 		{7D4B168E-0722-4D44-8550-D63467B50981}.Debug|x64.ActiveCfg = Debug|x64
 		{7D4B168E-0722-4D44-8550-D63467B50981}.Debug|x64.Build.0 = Debug|x64
 		{7D4B168E-0722-4D44-8550-D63467B50981}.Debug|x86.ActiveCfg = Debug|Win32

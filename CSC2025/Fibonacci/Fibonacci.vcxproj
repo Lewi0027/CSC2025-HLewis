@@ -24,6 +24,7 @@
     <ProjectGuid>{0b3c277c-0a54-4c21-a030-f8f6511bc0fd}</ProjectGuid>
     <RootNamespace>Fibonacci</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Fibonacci-Wrong</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
