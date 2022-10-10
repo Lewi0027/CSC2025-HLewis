@@ -13,8 +13,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Exchange", "Exchange\Exchan
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Alphabet", "Alphabet\Alphabet.vcxproj", "{8BED9304-59D4-49E0-8E28-7746E3F960A1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fibonacci-Wrong", "Fibonacci\Fibonacci.vcxproj", "{0B3C277C-0A54-4C21-A030-F8F6511BC0FD}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fibonacci", "Fibonacci-Hard\Fibonacci-Hard.vcxproj", "{772DA0A5-45B5-4C79-8832-91D918E4ACC9}"
 EndProject
 Global
@@ -65,14 +63,6 @@ Global
 		{8BED9304-59D4-49E0-8E28-7746E3F960A1}.Release|x64.Build.0 = Release|x64
 		{8BED9304-59D4-49E0-8E28-7746E3F960A1}.Release|x86.ActiveCfg = Release|Win32
 		{8BED9304-59D4-49E0-8E28-7746E3F960A1}.Release|x86.Build.0 = Release|Win32
-		{0B3C277C-0A54-4C21-A030-F8F6511BC0FD}.Debug|x64.ActiveCfg = Debug|x64
-		{0B3C277C-0A54-4C21-A030-F8F6511BC0FD}.Debug|x64.Build.0 = Debug|x64
-		{0B3C277C-0A54-4C21-A030-F8F6511BC0FD}.Debug|x86.ActiveCfg = Debug|Win32
-		{0B3C277C-0A54-4C21-A030-F8F6511BC0FD}.Debug|x86.Build.0 = Debug|Win32
-		{0B3C277C-0A54-4C21-A030-F8F6511BC0FD}.Release|x64.ActiveCfg = Release|x64
-		{0B3C277C-0A54-4C21-A030-F8F6511BC0FD}.Release|x64.Build.0 = Release|x64
-		{0B3C277C-0A54-4C21-A030-F8F6511BC0FD}.Release|x86.ActiveCfg = Release|Win32
-		{0B3C277C-0A54-4C21-A030-F8F6511BC0FD}.Release|x86.Build.0 = Release|Win32
 		{772DA0A5-45B5-4C79-8832-91D918E4ACC9}.Debug|x64.ActiveCfg = Debug|x64
 		{772DA0A5-45B5-4C79-8832-91D918E4ACC9}.Debug|x64.Build.0 = Debug|x64
 		{772DA0A5-45B5-4C79-8832-91D918E4ACC9}.Debug|x86.ActiveCfg = Debug|Win32
