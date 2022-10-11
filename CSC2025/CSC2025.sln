@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MASM", "MASM\MASM.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Exchange", "Exchange\Exchange.vcxproj", "{034B67BE-93B8-48C1-BC2F-463616806F8D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fibonnaci", "Fibonnaci\Fibonnaci.vcxproj", "{F195F940-4D5E-4F69-A33D-EF595C7F9384}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{034B67BE-93B8-48C1-BC2F-463616806F8D}.Release|x64.Build.0 = Release|x64
 		{034B67BE-93B8-48C1-BC2F-463616806F8D}.Release|x86.ActiveCfg = Release|Win32
 		{034B67BE-93B8-48C1-BC2F-463616806F8D}.Release|x86.Build.0 = Release|Win32
+		{F195F940-4D5E-4F69-A33D-EF595C7F9384}.Debug|x64.ActiveCfg = Debug|x64
+		{F195F940-4D5E-4F69-A33D-EF595C7F9384}.Debug|x64.Build.0 = Debug|x64
+		{F195F940-4D5E-4F69-A33D-EF595C7F9384}.Debug|x86.ActiveCfg = Debug|Win32
+		{F195F940-4D5E-4F69-A33D-EF595C7F9384}.Debug|x86.Build.0 = Debug|Win32
+		{F195F940-4D5E-4F69-A33D-EF595C7F9384}.Release|x64.ActiveCfg = Release|x64
+		{F195F940-4D5E-4F69-A33D-EF595C7F9384}.Release|x64.Build.0 = Release|x64
+		{F195F940-4D5E-4F69-A33D-EF595C7F9384}.Release|x86.ActiveCfg = Release|Win32
+		{F195F940-4D5E-4F69-A33D-EF595C7F9384}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
