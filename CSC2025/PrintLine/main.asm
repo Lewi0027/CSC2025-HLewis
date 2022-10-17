@@ -24,6 +24,11 @@ _main:
 main ENDP
 
 _PrintLine PROC
+	
+	push	ebp
+	mov		ebp, esp
+	sub		esp, 20
+
 	; handle = GetStdHandle(-10)
 	push	-10
 	call	_GetStdHandle@4
@@ -49,6 +54,9 @@ _PrintLine PROC
 	push	offset msg
 	push	handleo
 	call	_WriteConsoleA@20
+
+	mov		esp, ebp
+	pop		ebp
 
 	ret		20
 
