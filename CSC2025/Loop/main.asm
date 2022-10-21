@@ -7,30 +7,24 @@ extern _ReadConsoleA@20: near
 
 .data
 
-previous	byte	1
-current		byte	1
-next		byte	0
-i			byte	3
-
 .code
 main PROC near
 _main:
-
-	mov		ecx, 8		; adjust as needed
-	mov		ah, previous
-	mov		al, current
-	mov		bh, next
+	mov		ecx, 8
+	mov		eax, 1
+	mov		ebx, 1
+	mov		esi, 0
 
 loop1:
 	; next = current + previous
-	add		ah, al
-	mov		bh, ah
+	add		eax, ebx
+	mov		esi, eax
 
 	; previous = current
-	mov		ah, al
+	mov		eax, ebx
 
 	; current = next
-	mov		al, bh
+	mov		ebx, esi
 
 	loop	loop1
 
