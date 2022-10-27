@@ -8,30 +8,32 @@ extern _ReadConsoleA@20: near
 
 .data
 
-n		dword	10
+msg			dword	97
+handle		dword	?
+written		dword	?
 
 .code
 main PROC near
 _main:
 
-	mov		eax, n
-	mov		ebx, 1; current
-	mov		ecx, 1; previous
+alphaloop:
 
-Fibloop:
-	
-	add		ecx, ebx
-	mov		edx, ecx
+	; handle = GetStdHandle(-11)
+	push	-11
+	call	_GetStdHandle@4
+	mov		handle, eax
 
-	mov		ecx, ebx
+	; WriteConsole(handle, &msg[0], 13, &written, 0)
+	push	0
+	push	offset written
+	push	4
+	push	offset msg
+	push	handle
+	call	_WriteConsoleA@20
 
-	mov		ebx, edx
-
-	dec		eax
-	cmp		eax, 2
-	ja		Fibloop
-
-	mov		eax, edx
+	add		msg, 1
+	cmp		msg, 122
+	jbe		alphaloop
 
 	push	0
 	call	_ExitProcess@4
