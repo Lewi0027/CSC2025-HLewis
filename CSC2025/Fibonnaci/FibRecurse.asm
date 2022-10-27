@@ -15,7 +15,6 @@ _FibRecurse:
 
 	sub		esp, 8
 	mov		[ebp-4], ecx
-	mov		[ebp-4], ecx
 
 
 	cmp		ecx, 2
