@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PrintLine", "PrintLine\Prin
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FibRecursive", "FibRecursive\FibRecursive.vcxproj", "{D3716064-513B-48D7-8D05-F00CE64F7E07}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntMull", "IntMull\IntMull.vcxproj", "{D9A35E18-8840-4520-B3F6-DE5C044629BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +113,14 @@ Global
 		{D3716064-513B-48D7-8D05-F00CE64F7E07}.Release|x64.Build.0 = Release|x64
 		{D3716064-513B-48D7-8D05-F00CE64F7E07}.Release|x86.ActiveCfg = Release|Win32
 		{D3716064-513B-48D7-8D05-F00CE64F7E07}.Release|x86.Build.0 = Release|Win32
+		{D9A35E18-8840-4520-B3F6-DE5C044629BC}.Debug|x64.ActiveCfg = Debug|x64
+		{D9A35E18-8840-4520-B3F6-DE5C044629BC}.Debug|x64.Build.0 = Debug|x64
+		{D9A35E18-8840-4520-B3F6-DE5C044629BC}.Debug|x86.ActiveCfg = Debug|Win32
+		{D9A35E18-8840-4520-B3F6-DE5C044629BC}.Debug|x86.Build.0 = Debug|Win32
+		{D9A35E18-8840-4520-B3F6-DE5C044629BC}.Release|x64.ActiveCfg = Release|x64
+		{D9A35E18-8840-4520-B3F6-DE5C044629BC}.Release|x64.Build.0 = Release|x64
+		{D9A35E18-8840-4520-B3F6-DE5C044629BC}.Release|x86.ActiveCfg = Release|Win32
+		{D9A35E18-8840-4520-B3F6-DE5C044629BC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

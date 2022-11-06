@@ -30,6 +30,8 @@ _main:
 	push	handlei
 	call	_ReadConsoleA@20
 
+
+
 	; handle = GetStdHandle(-11)
 	push	-11
 	call	_GetStdHandle@4
