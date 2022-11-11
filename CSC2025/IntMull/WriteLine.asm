@@ -7,8 +7,10 @@ extern _WriteConsoleA@20: near
 
 .data
 
-num1		byte	'Enter Number 1: ', 10
-num2		byte	'Enter Number 2: ', 10
+num1		byte	'Enter Number 1: '
+num2		byte	'Enter Number 2: '
+num3		byte	'Answer: '
+num4		byte	10
 written		dword	?
 handle		dword	?
 
@@ -32,6 +34,9 @@ _WriteLine:
 	cmp		eax, 3
 	je		_number3
 
+	cmp		eax, 4
+	je		_number4
+
 _number1:
 	; display "1: "
 
@@ -43,7 +48,7 @@ _number1:
 	; WriteConsole(handle, &msg[0], 32, &written, 0)
 	push	0
 	push	offset written
-	push	17
+	push	16
 	push	offset num1
 	push	handle
 	call	_WriteConsoleA@20
@@ -51,7 +56,7 @@ _number1:
 
 	mov		esp, ebp
 	pop		ebp
-	ret 0
+	ret 4
 
 _number2:
 	; display "2: "
@@ -64,7 +69,7 @@ _number2:
 	; WriteConsole(handle, &msg[0], 32, &written, 0)
 	push	0
 	push	offset written
-	push	17
+	push	16
 	push	offset num2
 	push	handle
 	call	_WriteConsoleA@20
@@ -74,15 +79,45 @@ _number2:
 	ret	4
 
 _number3:
+	; display "Answer is: "
+
+	; handle = GetStdHandle(-11)
+	push	-11
+	call	_GetStdHandle@4
+	mov		handle, eax
+
+	; WriteConsole(handle, &msg[0], 32, &written, 0)
+	push	0
+	push	offset written
+	push	10
+	push	offset num3
+	push	handle
+	call	_WriteConsoleA@20
 
 	mov		esp, ebp
 	pop		ebp
-	ret 4
+	ret		4
 
-	mov		ebx, offset msg
-	mov		eax, 48
-	sub		[ebx], eax
-	mov		ecx, [ebx]
+_number4:
+	; display "/n"
+
+	; handle = GetStdHandle(-11)
+	push	-11
+	call	_GetStdHandle@4
+	mov		handle, eax
+
+	; WriteConsole(handle, &msg[0], 32, &written, 0)
+	push	0
+	push	offset written
+	push	1
+	push	offset num4
+	push	handle
+	call	_WriteConsoleA@20
+
+
+	mov		esp, ebp
+	pop		ebp
+	ret		4
 
 WriteLine ENDP
 END

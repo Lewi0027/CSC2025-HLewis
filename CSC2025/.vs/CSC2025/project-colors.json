@@ -1,0 +1,51 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "bb65c0b1-95f2-4fae-a269-9f2b424699ad": {
+      "ProjectGuid": "bb65c0b1-95f2-4fae-a269-9f2b424699ad",
+      "DisplayName": "Hello World",
+      "ColorIndex": 0
+    },
+    "d9a35e18-8840-4520-b3f6-de5c044629bc": {
+      "ProjectGuid": "d9a35e18-8840-4520-b3f6-de5c044629bc",
+      "DisplayName": "IntMull",
+      "ColorIndex": 1
+    },
+    "207e8b8e-9b18-418b-b033-53987ef29ebc": {
+      "ProjectGuid": "207e8b8e-9b18-418b-b033-53987ef29ebc",
+      "DisplayName": "Echo",
+      "ColorIndex": 2
+    },
+    "034b67be-93b8-48c1-bc2f-463616806f8d": {
+      "ProjectGuid": "034b67be-93b8-48c1-bc2f-463616806f8d",
+      "DisplayName": "Exchange",
+      "ColorIndex": 3
+    },
+    "757f621e-28f3-4399-919f-15b4277dd770": {
+      "ProjectGuid": "757f621e-28f3-4399-919f-15b4277dd770",
+      "DisplayName": "SumOfNumbers",
+      "ColorIndex": 4
+    },
+    "0641a796-a74c-4c21-b0b9-8f0cec3d35d2": {
+      "ProjectGuid": "0641a796-a74c-4c21-b0b9-8f0cec3d35d2",
+      "DisplayName": "Loop",
+      "ColorIndex": 5
+    },
+    "a98795ab-8f17-414c-9b3b-ab1cd6387820": {
+      "ProjectGuid": "a98795ab-8f17-414c-9b3b-ab1cd6387820",
+      "DisplayName": "PrintLine",
+      "ColorIndex": 6
+    },
+    "d3716064-513b-48d7-8d05-f00ce64f7e07": {
+      "ProjectGuid": "d3716064-513b-48d7-8d05-f00ce64f7e07",
+      "DisplayName": "FibRecursive",
+      "ColorIndex": 7
+    },
+    "f195f940-4d5e-4f69-a33d-ef595c7f9384": {
+      "ProjectGuid": "f195f940-4d5e-4f69-a33d-ef595c7f9384",
+      "DisplayName": "Fibonnaci",
+      "ColorIndex": 8
+    }
+  },
+  "NextColorIndex": 9
+}
