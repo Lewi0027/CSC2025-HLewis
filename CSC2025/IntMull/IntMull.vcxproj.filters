@@ -24,5 +24,11 @@
     <MASM Include="ReadLine.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="AtoI.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="ItoA.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
 </Project>

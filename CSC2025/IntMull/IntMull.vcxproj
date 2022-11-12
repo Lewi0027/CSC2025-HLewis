@@ -142,6 +142,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <MASM Include="AtoI.asm" />
+    <MASM Include="ItoA.asm" />
     <MASM Include="main.asm" />
     <MASM Include="ReadLine.asm" />
     <MASM Include="WriteLine.asm" />

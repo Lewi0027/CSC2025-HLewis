@@ -20,24 +20,25 @@ _main:
 	push	eax
 
 	call	WriteLine
+
 	call	ReadLine
-
-	mov		eax, 4
-	call	WriteLine
-
-	; call	AtoI
-	; call	ItoA
+	push	eax
+	mov		edx, [esp]
+	
+	call	AtoI
+	push	eax
 
 	mov		eax, 2
 	push	eax
 
 	call	WriteLine
 	call	ReadLine
+	push	eax
 
-	mov		eax, 4
-	call	WriteLine
+	call	AtoI
+	mov		edx, [ebp+4]
+	mul		edx
 
-	; call	AtoI
 	; call	ItoA
 
 	mov		eax, 3

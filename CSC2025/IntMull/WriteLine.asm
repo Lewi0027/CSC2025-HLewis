@@ -9,8 +9,7 @@ extern _WriteConsoleA@20: near
 
 num1		byte	'Enter Number 1: '
 num2		byte	'Enter Number 2: '
-num3		byte	'Answer: '
-num4		byte	10
+num3		byte	'The multiplication result is: '
 written		dword	?
 handle		dword	?
 
@@ -34,9 +33,6 @@ _WriteLine:
 	cmp		eax, 3
 	je		_number3
 
-	cmp		eax, 4
-	je		_number4
-
 _number1:
 	; display "1: "
 
@@ -56,7 +52,7 @@ _number1:
 
 	mov		esp, ebp
 	pop		ebp
-	ret 4
+	ret		4
 
 _number2:
 	; display "2: "
@@ -76,7 +72,7 @@ _number2:
 
 	mov		esp, ebp
 	pop		ebp
-	ret	4
+	ret		4
 
 _number3:
 	; display "Answer is: "
@@ -89,31 +85,10 @@ _number3:
 	; WriteConsole(handle, &msg[0], 32, &written, 0)
 	push	0
 	push	offset written
-	push	10
+	push	30
 	push	offset num3
 	push	handle
 	call	_WriteConsoleA@20
-
-	mov		esp, ebp
-	pop		ebp
-	ret		4
-
-_number4:
-	; display "/n"
-
-	; handle = GetStdHandle(-11)
-	push	-11
-	call	_GetStdHandle@4
-	mov		handle, eax
-
-	; WriteConsole(handle, &msg[0], 32, &written, 0)
-	push	0
-	push	offset written
-	push	1
-	push	offset num4
-	push	handle
-	call	_WriteConsoleA@20
-
 
 	mov		esp, ebp
 	pop		ebp

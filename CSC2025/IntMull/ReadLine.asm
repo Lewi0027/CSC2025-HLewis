@@ -24,15 +24,14 @@ _ReadLine:
 	; ReadConsole(handle, &msg[0], 13, &written, 0)
 	push	0
 	push	offset input
-	push	5
+	push	7
 	push	offset msg
 	push	handle
 	call	_ReadConsoleA@20
 
 	mov		eax, offset msg
 
-	push 0
-	call _ExitProcess@4
+	ret		0
 
 ReadLine ENDP
 END
