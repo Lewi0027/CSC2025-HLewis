@@ -3,8 +3,6 @@
 
 .data
 
-; charArray	byte 6 DUP (13)
-
 .code
 AtoI PROC near
 _AtoI:

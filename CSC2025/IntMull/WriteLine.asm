@@ -90,6 +90,21 @@ _number3:
 	push	handle
 	call	_WriteConsoleA@20
 
+	; handle = GetStdHandle(-11)
+	push	-11
+	call	_GetStdHandle@4
+	mov		handle, eax
+
+	add		ebp, 12
+
+	; WriteConsole(handle, &msg[0], 32, &written, 0)
+	push	0
+	push	offset written
+	push	10
+	push	[ebp]
+	push	handle
+	call	_WriteConsoleA@20
+
 	mov		esp, ebp
 	pop		ebp
 	ret		4

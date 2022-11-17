@@ -10,7 +10,7 @@ extern AtoI: near
 
 .data
 
-; charArray	byte	32 DUP (0)
+charArray	byte 11 DUP (13)
 
 .code
 main PROC near
@@ -28,11 +28,10 @@ _main:
 
 	push	eax
 	call	AtoI
-	mov		[ebp-4], eax
+	mov		[ebp-4], eax ; push int value
 
 	mov		eax, 2
-
-	mov		[ebp-8], eax
+	mov		[ebp-8], eax ; push selection 2 for WriteLine
 
 	sub		esp, 8
 	mov		ebp, esp
@@ -49,10 +48,15 @@ _main:
 	mul		edx
 
 	push	eax
+	mov		eax, offset charArray
 	call	ItoA
+	mov		[ebp-4], eax ;push location of charArray
 
 	mov		eax, 3
-	push	eax
+	mov		[ebp-8], eax ;push selection 3 for WriteLine
+
+	sub		esp, 12
+	mov		ebp, esp
 
 	call	WriteLine
 

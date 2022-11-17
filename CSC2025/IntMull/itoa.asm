@@ -3,6 +3,8 @@
 
 .data
 
+charArray	byte 6 DUP (13)
+
 .code
 ItoA PROC near
 _ItoA:
@@ -11,29 +13,80 @@ _ItoA:
 	mov		ebp, esp
 	mov		ecx, [ebp+8]
 	
-	mov		bl,	cl
-	cmp		bl, 0
-	je		_zero
+	mov		esi, eax ;move charArray location to edx
+	mov		eax, ecx ;move int value to eax
 
-	mov		[eax], bl
-	cmp		eax, eax
-	je		_notzero
+	mov		ebx, 10
+	mov		ecx, 1000000000
+	mov		edi, 1
 
-_zero:
-	add		ecx, 1
-	mov		bl, cl
+_loopme:
 
-	cmp		bl, 0
-	je		_zero
-
-	mov		[eax], bl
-	cmp		eax, eax
-	je		_notzero
-
-_notzero:
+	div		ecx
 	
+	cmp		eax, 0
+	jne		_numstart
+
+	add		esi, 1 ;move one further through charArray
+	add		edi, 1 ;int to know depth into charArray
+
+	mov		[ebp-4], edx ;move remainder to stack to retain
+
+	mov		eax, ecx ;divide ecx by 10
+	mov		edx, 0
+	div		ebx
+	mov		ecx, eax
+
+	mov		eax, [ebp-4] ;recover remainder as whole number
+
+	cmp		eax, eax
+	je		_loopme
+
+_numstart:
+
+	mov		[esi], al ;move int value to charArray
+
+	add		esi, 1 ;move one further through charArray
+	add		edi, 1 ;int to know depth into charArray
+
+	mov		[ebp-4], edx ;move remainder to stack to retain
+
+	mov		eax, ecx ;divide ecx by 10
+	mov		edx, 0
+	div		ebx
+	mov		ecx, eax
+
+	mov		eax, [ebp-4] ;recover remainder as whole number
+
+	div		ecx
+
+	cmp		edi, 10
+	jne		_numstart
+
+	mov		[esi], al ;move int value to charArray
+	mov		ebx, 13
+	mov		ecx, 48
+	sub		esi, edi
+
+_thirteen:
+	
+	add		esi, 1
+	cmp		[esi], bl
+	je		_thirteen
+
+_turntoalpha:
+
+	add		[esi], cl
+	add		esi, 1
+
+	cmp		[esi], bl
+	jne		_turntoalpha
 
 _end:
+
+	sub		esi, 10
+	mov		eax, esi
+
 	mov		esp, ebp
 	pop		ebp
 	ret		4
