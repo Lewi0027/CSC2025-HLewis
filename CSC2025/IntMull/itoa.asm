@@ -1,17 +1,42 @@
 .386P
 .model flat
 
-extern _ExitProcess@4: near
-extern WriteLine: near
-
 .data
 
 .code
 ItoA PROC near
 _ItoA:
 
-	push 0
-	call _ExitProcess@4
+	push	ebp
+	mov		ebp, esp
+	mov		ecx, [ebp+8]
+	
+	mov		bl,	cl
+	cmp		bl, 0
+	je		_zero
+
+	mov		[eax], bl
+	cmp		eax, eax
+	je		_notzero
+
+_zero:
+	add		ecx, 1
+	mov		bl, cl
+
+	cmp		bl, 0
+	je		_zero
+
+	mov		[eax], bl
+	cmp		eax, eax
+	je		_notzero
+
+_notzero:
+	
+
+_end:
+	mov		esp, ebp
+	pop		ebp
+	ret		4
 
 ItoA ENDP
 END

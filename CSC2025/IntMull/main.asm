@@ -10,41 +10,54 @@ extern AtoI: near
 
 .data
 
-charArray	byte	32 DUP (0)
+; charArray	byte	32 DUP (0)
 
 .code
 main PROC near
 _main:
 
-	mov		eax, 1
-	push	eax
+	push	ebp
+	mov		ebp, esp
 
+	mov		eax, 1
+
+	mov		[ebp-4], eax
 	call	WriteLine
 
 	call	ReadLine
+
 	push	eax
-	mov		edx, [esp]
-	
 	call	AtoI
-	push	eax
+	mov		[ebp-4], eax
 
 	mov		eax, 2
-	push	eax
+
+	mov		[ebp-8], eax
+
+	sub		esp, 8
+	mov		ebp, esp
 
 	call	WriteLine
-	call	ReadLine
-	push	eax
 
+	mov		esp, ebp
+
+	call	ReadLine
+
+	push	eax
 	call	AtoI
-	mov		edx, [ebp+4]
+	pop		edx
 	mul		edx
 
-	; call	ItoA
+	push	eax
+	call	ItoA
 
 	mov		eax, 3
 	push	eax
 
 	call	WriteLine
+
+	mov		esp, ebp
+	pop		ebp
 
 	push	0
 	call	_ExitProcess@4

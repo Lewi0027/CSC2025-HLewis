@@ -1,9 +1,6 @@
 .386P
 .model flat
 
-extern _ExitProcess@4: near
-extern WriteLine: near
-
 .data
 
 ; charArray	byte 6 DUP (13)
@@ -23,7 +20,7 @@ _AtoI:
 	mov		al, bl
 
 _loopme:
-
+	
 	add		ecx, 1
 	mov		bl, [ecx]
 
@@ -35,7 +32,7 @@ _loopme:
 	mov		edx, 10
 	mul		edx
 	add		al, bl
-
+	
 	cmp		edx, edx
 	je		_loopme
 

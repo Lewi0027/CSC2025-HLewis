@@ -4,7 +4,6 @@
 extern _GetStdHandle@4: near
 extern _ExitProcess@4: near
 extern _ReadConsoleA@20: near
-extern WriteLine: near
 
 .data
 
@@ -16,6 +15,9 @@ msg			dword	?
 ReadLine PROC near
 _ReadLine:
 
+	push	ebp
+	mov		ebp, esp
+	
 	; handle = GetStdHandle(-10)
 	push	-10
 	call	_GetStdHandle@4
@@ -30,6 +32,9 @@ _ReadLine:
 	call	_ReadConsoleA@20
 
 	mov		eax, offset msg
+
+	mov		esp, ebp
+	pop		ebp
 
 	ret		0
 
