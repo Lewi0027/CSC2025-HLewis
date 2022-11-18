@@ -33,7 +33,7 @@ _main:
 	mov		eax, 2
 	mov		[ebp-8], eax ; push selection 2 for WriteLine
 
-	sub		esp, 8
+	sub		esp, 12
 	mov		ebp, esp
 
 	call	WriteLine
@@ -44,7 +44,7 @@ _main:
 
 	push	eax
 	call	AtoI
-	pop		edx
+	mov		edx, [ebp+4]
 	mul		edx
 
 	push	eax
@@ -55,7 +55,7 @@ _main:
 	mov		eax, 3
 	mov		[ebp-8], eax ;push selection 3 for WriteLine
 
-	sub		esp, 12
+	sub		esp, 8
 	mov		ebp, esp
 
 	call	WriteLine

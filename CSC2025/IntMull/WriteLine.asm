@@ -101,9 +101,11 @@ _number3:
 
 	; if [ebx] is 0d, then skip to next
 	mov		ecx, 13
+	mov		esi, 12 ;how many bytes to output
 
 _loopford:
 
+	sub		esi, 1
 	add		ebx, 1
 	cmp		[ebx], cl
 	je		_loopford
@@ -114,7 +116,7 @@ _backtobody:
 	; WriteConsole(handle, &msg[0], 32, &written, 0)
 	push	0
 	push	offset written
-	push	11
+	push	esi
 	push	ebx
 	push	handle
 	call	_WriteConsoleA@20

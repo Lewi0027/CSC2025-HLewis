@@ -11,7 +11,7 @@ _ItoA:
 
 	push	ebp
 	mov		ebp, esp
-	mov		ecx, [ebp+8]
+	mov		ecx, [ebp+8] ;int value in hex
 	
 	mov		esi, eax ;move charArray location to edx
 	mov		eax, ecx ;move int value to eax
@@ -64,6 +64,7 @@ _numstart:
 	jne		_numstart
 
 	mov		[esi], al ;move int value to charArray
+
 	mov		ebx, 13
 	mov		ecx, 48
 	sub		esi, edi
