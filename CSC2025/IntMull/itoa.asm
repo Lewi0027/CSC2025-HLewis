@@ -58,12 +58,17 @@ _numstart:
 
 	mov		eax, [ebp-4] ;recover remainder as whole number
 
+	cmp		ecx, 0
+	je		_lessthanten
+
 	div		ecx
 
 	cmp		edi, 10
 	jne		_numstart
 
 	mov		[esi], al ;move int value to charArray
+
+_lessthanten:
 
 	mov		ebx, 13
 	mov		ecx, 48
