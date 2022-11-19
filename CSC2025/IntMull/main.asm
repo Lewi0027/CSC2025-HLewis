@@ -10,7 +10,10 @@ extern AtoI: near
 
 .data
 
-charArray	byte 11 DUP (13)
+num1		byte	'Enter Number 1: ', 0
+num2		byte	'Enter Number 2: ', 0
+num3		byte	'The multiplication result is: ', 0
+charArray	byte	11 DUP (13)
 
 .code
 main PROC near
@@ -19,45 +22,35 @@ _main:
 	push	ebp
 	mov		ebp, esp
 
-	mov		eax, 1
-
-	mov		[ebp-4], eax
+	push	offset num1
 	call	WriteLine
 
 	call	ReadLine
 
 	push	eax
 	call	AtoI
+
 	mov		[ebp-4], eax ; push int value
+	sub		esp, 4
 
-	mov		eax, 2
-	mov		[ebp-8], eax ; push selection 2 for WriteLine
-
-	sub		esp, 12
-	mov		ebp, esp
-
+	push	offset num2
 	call	WriteLine
-
-	mov		esp, ebp
 
 	call	ReadLine
 
 	push	eax
 	call	AtoI
-	mov		edx, [ebp+4]
+	mov		edx, [ebp-4]
 	mul		edx
 
 	push	eax
-	mov		eax, offset charArray
+	push	offset charArray
 	call	ItoA
-	mov		[ebp-4], eax ;push location of charArray
 
-	mov		eax, 3
-	mov		[ebp-8], eax ;push selection 3 for WriteLine
+	push	offset num3
+	call	WriteLine
 
-	sub		esp, 8
-	mov		ebp, esp
-
+	push	offset charArray
 	call	WriteLine
 
 	mov		esp, ebp

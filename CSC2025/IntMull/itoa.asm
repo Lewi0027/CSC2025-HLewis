@@ -3,96 +3,46 @@
 
 .data
 
-charArray	byte 6 DUP (13)
-
 .code
 ItoA PROC near
 _ItoA:
 
 	push	ebp
 	mov		ebp, esp
-	mov		ecx, [ebp+8] ;int value in hex
+	mov		eax, [ebp+12] ;int value
 	
-	mov		esi, eax ;move charArray location to edx
-	mov		eax, ecx ;move int value to eax
-
+	mov		esi, [ebp+8] ;move charArray location to esi
 	mov		ebx, 10
-	mov		ecx, 1000000000
-	mov		edi, 1
+	mov		ecx, 0
+	sub		esi, 1
 
-_loopme:
-
-	div		ecx
+_loopforsize: ;determine length of new decimal
 	
+	add		ecx, 1
+	div		ebx
+	mov		edx, 0
+
 	cmp		eax, 0
-	jne		_numstart
+	jne		_loopforsize
 
-	add		esi, 1 ;move one further through charArray
-	add		edi, 1 ;int to know depth into charArray
+	add		esi, ecx ;move esi to location of last decimal value in new int
+	mov		eax, [ebp+12] ;grab int value again
 
-	mov		[ebp-4], edx ;move remainder to stack to retain
+_loop1:
 
-	mov		eax, ecx ;divide ecx by 10
-	mov		edx, 0
 	div		ebx
-	mov		ecx, eax
-
-	mov		eax, [ebp-4] ;recover remainder as whole number
-
-	cmp		eax, eax
-	je		_loopme
-
-_numstart:
-
-	mov		[esi], al ;move int value to charArray
-
-	add		esi, 1 ;move one further through charArray
-	add		edi, 1 ;int to know depth into charArray
-
-	mov		[ebp-4], edx ;move remainder to stack to retain
-
-	mov		eax, ecx ;divide ecx by 10
+	mov		cl, dl
+	add		ecx, 48
+	mov		[esi], cl
+	sub		esi, 1
 	mov		edx, 0
-	div		ebx
-	mov		ecx, eax
 
-	mov		eax, [ebp-4] ;recover remainder as whole number
-
-	cmp		ecx, 0
-	je		_lessthanten
-
-	div		ecx
-
-	cmp		edi, 10
-	jne		_numstart
-
-	mov		[esi], al ;move int value to charArray
-
-_lessthanten:
-
-	mov		ebx, 13
-	mov		ecx, 48
-	sub		esi, edi
-
-_thirteen:
-	
-	add		esi, 1
-	cmp		[esi], bl
-	je		_thirteen
-
-_turntoalpha:
-
-	add		[esi], cl
-	add		esi, 1
-
-	cmp		[esi], bl
-	jne		_turntoalpha
+	cmp		eax, 0
+	jne		_loop1
 
 _end:
-
-	sub		esi, 10
+	add		esi, 1
 	mov		eax, esi
-
 	mov		esp, ebp
 	pop		ebp
 	ret		4
