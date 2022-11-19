@@ -45,7 +45,7 @@ _end:
 	mov		eax, esi
 	mov		esp, ebp
 	pop		ebp
-	ret		4
+	ret		8
 
 ItoA ENDP
 END
