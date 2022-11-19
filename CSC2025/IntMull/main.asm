@@ -30,7 +30,7 @@ _main:
 	push	eax
 	call	AtoI
 
-	mov		[ebp-4], eax ; push int value
+	push	eax
 	sub		esp, 4
 
 	push	offset num2
@@ -40,6 +40,7 @@ _main:
 
 	push	eax
 	call	AtoI
+	
 	mov		edx, [ebp-4]
 	mul		edx
 
