@@ -13,7 +13,7 @@ extern AtoI: near
 num1		byte	'Enter Number 1: ', 0
 num2		byte	'Enter Number 2: ', 0
 num3		byte	'The multiplication result is: ', 0
-charArray	byte	11 DUP (13)
+charArray	byte	11 DUP (0)
 
 .code
 main PROC near

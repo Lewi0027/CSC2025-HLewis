@@ -14,11 +14,11 @@ _ItoA:
 	mov		esi, [ebp+8] ;move charArray location to esi
 	mov		ebx, 10
 	mov		ecx, 0
-	sub		esi, 1
+	sub		esi, 1 ;see 21
 
 _loopforsize: ;determine length of new decimal
 	
-	add		ecx, 1
+	add		ecx, 1 ;amount of integers in decimal (1 over)
 	div		ebx
 	mov		edx, 0
 
@@ -31,16 +31,13 @@ _loopforsize: ;determine length of new decimal
 _loop1:
 
 	div		ebx
-	mov		cl, dl
-	add		ecx, 48
-	mov		[esi], cl
-	sub		esi, 1
+	add		dl, 48 ;add 48 to turn from int to alpha
+	mov		[esi], dl ;move alpha to array
+	sub		esi, 1 ;change array location for next iteration
 	mov		edx, 0
 
 	cmp		eax, 0
 	jne		_loop1
-
-_end:
 
 	mov		esp, ebp
 	pop		ebp

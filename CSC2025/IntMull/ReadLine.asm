@@ -31,11 +31,10 @@ _ReadLine:
 	push	handle
 	call	_ReadConsoleA@20
 
-	mov		eax, offset msg
+	mov		eax, offset msg ;location of input
 
 	mov		esp, ebp
 	pop		ebp
-
 	ret		0
 
 ReadLine ENDP
