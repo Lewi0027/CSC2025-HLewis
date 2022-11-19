@@ -41,8 +41,7 @@ _loop1:
 	jne		_loop1
 
 _end:
-	add		esi, 1
-	mov		eax, esi
+
 	mov		esp, ebp
 	pop		ebp
 	ret		8
