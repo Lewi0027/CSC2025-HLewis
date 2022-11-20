@@ -13,7 +13,7 @@ extern AtoI: near
 num1		byte	'Enter Number 1: ', 0
 num2		byte	'Enter Number 2: ', 0
 num3		byte	'The multiplication result is: ', 0
-charArray	byte	11 DUP (0)
+charArray	byte	32 DUP (0)
 
 .code
 main PROC near
@@ -21,6 +21,7 @@ _main:
 
 	push	ebp
 	mov		ebp, esp
+	sub		esp, 4 ;making room for temporary int
 
 	push	offset num1
 	call	WriteLine
@@ -30,8 +31,7 @@ _main:
 	push	eax
 	call	AtoI
 
-	push	eax
-	sub		esp, 4
+	mov		[ebp-4], eax ;saving eax
 
 	push	offset num2
 	call	WriteLine
@@ -48,10 +48,12 @@ _main:
 	push	offset charArray
 	call	ItoA
 
+	mov		[ebp-4], eax ;saving location
+
 	push	offset num3
 	call	WriteLine
 
-	push	offset charArray
+	push	[ebp-4]
 	call	WriteLine
 
 	mov		esp, ebp

@@ -9,7 +9,7 @@ extern _ReadConsoleA@20: near
 
 handle		dword	?
 input		dword	?
-msg			dword	?
+msg			byte 32 DUP (0)
 
 .code
 ReadLine PROC near
@@ -26,7 +26,7 @@ _ReadLine:
 	; ReadConsole(handle, &msg[0], 13, &written, 0)
 	push	0
 	push	offset input
-	push	7
+	push	32
 	push	offset msg
 	push	handle
 	call	_ReadConsoleA@20
