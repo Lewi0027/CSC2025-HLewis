@@ -15,23 +15,24 @@ main PROC near
 _main:
 
 	mov		eax, n
-	mov		ebx, 1; current
-	mov		ecx, 1; previous
+	mov		ecx, 1; current
+	mov		ebx, 0; previous
+	mov		edx, 1; next
 
 Fibloop:
 	
-	add		ecx, ebx
-	mov		edx, ecx
+	add		ebx, ecx
+	mov		edx, ebx
 
-	mov		ecx, ebx
+	mov		ebx, ecx
 
-	mov		ebx, edx
+	mov		ecx, edx
 
 	dec		eax
-	cmp		eax, 2
+	cmp		eax, 1
 	ja		Fibloop
-
-	mov		eax, edx
+	
+	mov		eax, ecx
 
 	push	0
 	call	_ExitProcess@4

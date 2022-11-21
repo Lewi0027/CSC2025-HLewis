@@ -11,16 +11,17 @@ _FibRecurse:
 	
 	push	ebp
 	mov		ebp, esp
-	mov		ecx, [ebp+8]
+	mov		ecx, [ebp+8] ;grab iterations value
 
-	sub		esp, 8
-	mov		[ebp-4], ecx
+	sub		esp, 8 ; move stack pointer for two pushes
+	mov		[ebp-4], ecx ; move iterations to stack
 
 
 	cmp		ecx, 2
 	ja		_nonbasecase
 
-	mov		eax, 1
+	mov		eax, 1 ; if not greater than two move 1 to eax
+
 	mov		esp, ebp
 	pop		ebp
 	ret		4

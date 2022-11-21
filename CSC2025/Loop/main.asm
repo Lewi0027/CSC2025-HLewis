@@ -7,10 +7,14 @@ extern _ReadConsoleA@20: near
 
 .data
 
+n			dword	8
+
 .code
 main PROC near
 _main:
-	mov		ecx, 8
+
+	mov		ecx, 0
+	mov		ecx, n
 	mov		eax, 1
 	mov		ebx, 1
 	mov		esi, 0

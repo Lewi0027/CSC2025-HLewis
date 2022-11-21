@@ -31,7 +31,7 @@ _loop1:
 	cmp		eax, 0
 	jg		_loop1
 
-	mov		eax, esi ;returning charArray location
+	mov		eax, esi ;returning position in charArray
 
 	mov		esp, ebp
 	pop		ebp

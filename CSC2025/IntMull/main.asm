@@ -31,7 +31,7 @@ _main:
 	push	eax
 	call	AtoI
 
-	mov		[ebp-4], eax ;saving eax
+	mov		[ebp-4], eax ;saving int for later
 
 	push	offset num2
 	call	WriteLine
